@@ -1,5 +1,10 @@
 package com.ipoval;
 
+/**
+  Quickly benchmark CPU ops count.
+  @param
+  @return
+*/
 public class BenchmarkCPU {
     public static void main(String[] args) {
         long startTime = System.currentTimeMillis();
