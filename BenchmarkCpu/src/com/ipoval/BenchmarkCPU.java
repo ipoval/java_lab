@@ -7,7 +7,7 @@ import java.io.*;
   @param
   @return
 */
-public class BenchmarkCPU {
+final public class BenchmarkCPU {
     private static final int ONE_MIN = 60 * 1000;
     private static long OPS = 0L;
 
@@ -52,7 +52,7 @@ public class BenchmarkCPU {
 
             AsciiBorderedText asciiTextFrame = new AsciiBorderedText(stdOut.toString());
             System.out.print(asciiTextFrame.getBorderedText());
-        } catch (Exception e) {
+        } catch (final Exception e) {
             e.printStackTrace();
         }
     }
