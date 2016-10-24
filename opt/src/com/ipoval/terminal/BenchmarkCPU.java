@@ -1,4 +1,4 @@
-package com.ipoval;
+package com.ipoval.terminal;
 
 import java.io.*;
 
@@ -40,7 +40,7 @@ final public class BenchmarkCPU {
         try {
             String cmd = "sysctl -n machdep.cpu.brand_string";
             StringBuffer stdOut = new StringBuffer();
-            String stdOutline = "";
+            String stdOutline;
 
             Process proc = Runtime.getRuntime().exec(cmd);
             proc.waitFor();
@@ -50,8 +50,8 @@ final public class BenchmarkCPU {
                 stdOut.append(stdOutline + "\n");
             }
 
-            AsciiBorderedText asciiTextFrame = new AsciiBorderedText(stdOut.toString());
-            System.out.print(asciiTextFrame.getBorderedText());
+            AsciiBorderedText asciiFrame = new AsciiBorderedText(stdOut.toString());
+            System.out.print(asciiFrame);
         } catch (final Exception e) {
             e.printStackTrace();
         }

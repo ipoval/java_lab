@@ -1,4 +1,4 @@
-package com.ipoval;
+package com.ipoval.terminal;
 
 /**
  * Decorates text with ASCII border.
@@ -12,13 +12,14 @@ public class AsciiBorderedText {
     String borderedText = "";
     int textLength = 0;
 
-    AsciiBorderedText(String text) {
+    public AsciiBorderedText(String text) {
         this.text = text.trim();
         addWhitespacePadding();
         this.textLength = text.length();
     }
 
-    public String getBorderedText() {
+    @Override
+    public String toString() {
         if (this.textLength == 0) { return ""; }
 
         // append "+-----------------+\n"
