@@ -1,5 +1,9 @@
 ### smartreport.com
-##### Upload MSFO report of a company, parse PDF file, store information from the report, build fancy charts and graphs based on the extracted data.
+
+- upload MSFO report of a company as a pdf-file;
+- extract text from the pdf-file report;
+- store data from the report;
+- build fancy charts and graphs from the extracted data;
 
 ###### INFRA
   * AWS (EC2, S3, ELB)
