@@ -1,6 +1,7 @@
 package com.ipoval.terminal;
 
 import java.io.*;
+import java.util.logging.*;
 
 /**
   Quickly benchmark CPU ops count.
@@ -12,6 +13,8 @@ final public class BenchmarkCPU {
     private static long OPS = 0L;
 
     public static void main(String[] args) {
+        Logger.getLogger(BenchmarkCPU.class.getName()).log(Level.INFO, "starting " + BenchmarkCPU.class.getName());
+
         echoProcCpuInfo();
 
         long t1 = getMs();
@@ -54,6 +57,7 @@ final public class BenchmarkCPU {
             System.out.print(asciiFrame);
         } catch (final Exception e) {
             e.printStackTrace();
+            Logger.getLogger(BenchmarkCPU.class.getName()).log(Level.SEVERE, null, e.getMessage());
         }
     }
 }
